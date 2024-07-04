@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dobrodošli na oglasnik</h1>
+    <p>Ovdje možete kupiti ili ponuditi svoj motocikl:</p>
+    <ul>
+        <li><a href="{{ url_for('prodaja') }}">Prodaja motocikla</a></li>
+        <li><a href="{{ url_for('kupnja') }}">Kupnja motocikla</a></li>
+    </ul>
+</body>
+</html>

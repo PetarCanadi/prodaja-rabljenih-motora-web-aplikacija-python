@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOSTUPNI MOTOCIKLI ZA PRODAJU</title>
+</head>
+<body>
+    <h1>DOSTUPNI MOTOCIKLI ZA PRODAJU</h1>
+
+    <ul>
+        {% for motor in primjeri_motora %}
+        <li>
+            <strong>Marka:</strong> {{ motor['marka'] }}<br>
+            <strong>Model:</strong> {{ motor['model'] }}<br>
+            <strong>Godište:</strong> {{ motor['godiste'] }}<br>
+            <strong>Broj kilometara:</strong> {{ motor['kilometri'] }}<br>
+            <strong>Snaga:</strong> {{ motor['snaga'] }}<br>
+            <strong>Obujam:</strong> {{ motor['obujam'] }}<br>
+            <strong>Prodavač:</strong> {{ motor['prodavac'] }}<br>
+            <strong>Broj telefona prodavača:</strong> {{ motor['telefon'] }}<br>
+            {% if motor.get('slika') %}
+            <!-- Generiraj URL putanju za sliku -->
+            <img src="{{ url_for('static', filename=motor['slika']) }}" alt="{{ motor['marka'] }} {{ motor['model'] }}" style="max-width: 300px;">
+            {% else %}
+            <!-- Ako slika nije definirana, prikaži poruku -->
+            <p>Slika nije dostupna</p>
+            {% endif %}
+            {% if motor.get('cijena') %}
+            <strong>Cijena (EUR):</strong> {{ motor['cijena'] }}<br>
+            {% else %}
+            <p>Cijena nije navedena</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

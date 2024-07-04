@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodaja</title>
+</head>
+<body>
+    <h1>Ponudi svoj motor na prodaju</h1>
+    <form action="{{ url_for('prodaja') }}" method="post" enctype="multipart/form-data">
+        <label for="marka">Marka:</label>
+        <input type="text" id="marka" name="marka"><br><br>
+        
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model"><br><br>
+        
+        <label for="godiste">Godište:</label>
+        <input type="text" id="godiste" name="godiste"><br><br>
+        
+        <label for="kilometri">Kilometri:</label>
+        <input type="text" id="kilometri" name="kilometri"><br><br>
+        
+        <label for="snaga">Snaga:</label>
+        <input type="text" id="snaga" name="snaga"><br><br>
+        
+        <label for="obujam">Obujam:</label>
+        <input type="text" id="obujam" name="obujam"><br><br>
+        
+        <label for="prodavac">Prodavac:</label>
+        <input type="text" id="prodavac" name="prodavac"><br><br>
+        
+        <label for="telefon">Telefon:</label>
+        <input type="text" id="telefon" name="telefon"><br><br>
+
+        <label for="slike">Slike:</label>
+        <input type="file" id="slike" name="slike[]" multiple><br><br>
+        <label for="cijena">Cijena (EUR):</label>
+        <input type="number" id="cijena" name="cijena" min="0" step="0.01"><br><br>
+        
+        
+        <button type="submit">Ponudi motor</button>
+    </form>
+</body>
+</html>

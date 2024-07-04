@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodaja motocikla</title>
+</head>
+<body>
+    <h1>Prodaja motocikala </h1>
+    <p>Dobrodošli na našu stranicu za prodaju rabljenih motocikla!</p>
+    <p>Molimo registrirajte se ili prijavite kako biste nastavili, ili nastavite bez prijave.</p>
+    <ul>
+        <li><a href="{{ url_for('register') }}">Registracija</a></li>
+        <li><a href="{{ url_for('login') }}">Prijava</a></li>
+        <li><a href="{{ url_for('dashboard') }}">Nastavi bez prijave</a></li>
+    </ul>
+</body>
+</html>
